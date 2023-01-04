@@ -7,4 +7,4 @@ def uppercase(str):
         else:
             string.append(i)
     String = ''.join(string)
-    print(String)
+    print('{}'.format(String))
