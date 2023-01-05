@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+
+""" prints the number of and the list of its arguments."""
+
 from sys import argv
 
 lenght = len(argv)
