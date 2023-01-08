@@ -6,6 +6,6 @@ def print_matrix_integer(matrix=[[]]):
     for i in matrix:
         k = 1
         for j in i:
-            flag = " " if k < 3 else '\n'
+            flag = " " if k < len(i) else '\n'
             print("{:d}".format(j), end=flag)
             k += 1
