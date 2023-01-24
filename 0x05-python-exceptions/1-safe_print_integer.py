@@ -3,7 +3,7 @@
 def safe_print_integer(value):
     """
     Prints an intger and returns True
-    if value is an integer or False if value is 
+    if value is an integer or False if value is
     not an integer
 
     """
