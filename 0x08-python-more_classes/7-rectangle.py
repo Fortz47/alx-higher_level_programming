@@ -4,8 +4,9 @@
 
 class Rectangle:
     """class Rectangle that defines a rectangle"""
+
     number_of_instances = 0
-    print_symbol = '#'
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         self.width = width
@@ -47,7 +48,7 @@ class Rectangle:
             return ""
         string = ""
         for i in range(self.__height):
-            string += '#' * self.__width
+            string += str(self.print_symbol) * self.__width
             if i < (self.__height - 1):
                 string += '\n'
         return string
