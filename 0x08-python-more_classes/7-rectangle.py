@@ -4,9 +4,8 @@
 
 class Rectangle:
     """class Rectangle that defines a rectangle"""
-
     number_of_instances = 0
-    print_symbol = "#"
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         self.width = width
@@ -59,5 +58,5 @@ class Rectangle:
         return rect
 
     def __del__(self):
-        type(self).number_of_instances -= 1
         print('Bye rectangle...')
+        type(self).number_of_instances -= 1
