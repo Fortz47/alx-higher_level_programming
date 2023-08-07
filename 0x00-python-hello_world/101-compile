@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Get the Python file name from the environment variable
+pyfile="$PYFILE"
+
+if [ -n "$pyfile" ]; then
+	# Append 'c' to the output filename
+	pycfile="${pyfile%.py}c"
+
+	# Compile the Python file
+	python3 -m py_compile "$pyfile" && mv __pycache__/$pycfile .
+#	rm -rf __pycache__
+	echo "Compilation successful. Output file: $pycfile"
+else
+	echo "Environment variable PYFILE is not set."
+fi
