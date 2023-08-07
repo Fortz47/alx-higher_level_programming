@@ -13,6 +13,10 @@ int check_cycle(listint_t *list)
 	if (!list)
 		return (0);
 	while (ptr->next)
-		(ptr->next == list) ? (return 1) : (ptr = ptr->next);
+	{
+		if (ptr->next == list)
+			return (1);
+		ptr = ptr->next);
+	}
 	return (0);
 }
