@@ -13,7 +13,7 @@ int check_cycle(listint_t *list)
 
 	if (!list)
 		return (0);
-	while (ptr)
+	while (ptr->next)
 	{
 		ptrFast = ptrFast->next;
 		ptrFast = ptrFast->next;
