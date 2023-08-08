@@ -15,7 +15,7 @@ int check_cycle(listint_t *list)
 		return (0);
 	while (ptr)
 	{
-		ptrFast = ptrFast->next->next;
+		ptrFast = (ptrFast->next)->next;
 		if (ptr == ptrFast)
 			return (1);
 		ptr = ptr->next;
