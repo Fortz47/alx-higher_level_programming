@@ -15,10 +15,9 @@ int check_cycle(listint_t *list)
 		return (0);
 	while (ptr->next)
 	{
-		if (ptrFast->next)
-			ptrFast = ptrFast->next;
-		if (ptrFast->next)
-			ptrFast = ptrFast->next;
+		if (!ptrFast->next || !ptrFast->next->next || !ptrFast->next->next->next)
+			return (0);
+		ptrFast = ptrFast->next->next;
 		if (ptr == ptrFast)
 			return (1);
 		ptr = ptr->next;
