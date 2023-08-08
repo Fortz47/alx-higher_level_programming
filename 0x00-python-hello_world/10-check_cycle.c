@@ -9,12 +9,14 @@
 int check_cycle(listint_t *list)
 {
 	listint_t *ptr = list;
+	listint_t *ptrFast = list;
 
 	if (!list)
 		return (0);
-	while (ptr->next)
+	while (ptr)
 	{
-		if (ptr->next == list)
+		ptrFast = ptrFast->next->next;
+		if (ptr == ptrFast)
 			return (1);
 		ptr = ptr->next;
 	}
