@@ -2,7 +2,7 @@
 
 def islower(c):
     if not c:
-        return
+        return False
     if c >= 'a' and c <= 'z':
         return True
     else:
