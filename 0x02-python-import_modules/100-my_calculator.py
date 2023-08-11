@@ -24,4 +24,3 @@ if __name__ == "__main__":
         result = div(a, b)
 
     print(f"{a} {argv[2]} {b} = {result}")
-
