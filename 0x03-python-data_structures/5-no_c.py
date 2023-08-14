@@ -6,6 +6,5 @@ def no_c(my_string):
         for ch in str2list:
             if ch == 'c' or ch == 'C':
                 str2list.remove(ch)
-    else:
-        return my_string
-    return ''.join(str2list)
+        return ''.join(str2list)
+    return my_string
