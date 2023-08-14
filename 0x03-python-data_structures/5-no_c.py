@@ -6,7 +6,3 @@ def no_c(my_string):
         if ch == 'c' or ch == 'C':
             str2list.remove(ch)
     return ''.join(str2list)
-
-print(no_c("Best School"))
-print(no_c("Chicago"))
-print(no_c("C is fun!"))
