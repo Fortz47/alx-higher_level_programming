@@ -13,19 +13,19 @@ int is_palindrome(listint_t **head)
 
 	if (!*head)
 		return (1);
-	while(ptr)
+	while (ptr)
 	{
 		count++;
 		ptr = ptr->next;
 	}
-	ptr = *head;
 	if (count % 2 == 0)
 	{
+		ptr = *head;
 		len = count / 2;
-		while(len)
+		while (len)
 		{
 			tmp = *head;
-			for(i = 1; i < count; i++)
+			for (i = 1; i < count; i++)
 				tmp = tmp->next;
 			if (tmp->n != ptr->n)
 				return (0);
