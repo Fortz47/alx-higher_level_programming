@@ -20,8 +20,9 @@ int is_palindrome(listint_t **head)
 	}
 	ptr = *head;
 	if (count % 2 != 0)
-		count -= 1;
-	len = count / 2;
+		len = (count - 1) / 2;
+	else
+		len = count / 2;
 	while (len)
 	{
 		tmp = *head;
