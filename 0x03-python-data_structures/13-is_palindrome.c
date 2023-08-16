@@ -18,22 +18,20 @@ int is_palindrome(listint_t **head)
 		count++;
 		ptr = ptr->next;
 	}
-	if (count % 2 == 0)
+	ptr = *head;
+	if (count % 2 != 0)
+		count -= 1;
+	len = count / 2;
+	while (len)
 	{
-		ptr = *head;
-		len = count / 2;
-		while (len)
-		{
-			tmp = *head;
-			for (i = 1; i < count; i++)
-				tmp = tmp->next;
-			if (tmp->n != ptr->n)
-				return (0);
-			ptr = ptr->next;
-			count--;
-			len--;
-		}
-		return (1);
+		tmp = *head;
+		for (i = 1; i < count; i++)
+			tmp = tmp->next;
+		if (tmp->n != ptr->n)
+			return (0);
+		ptr = ptr->next;
+		count--;
+		len--;
 	}
-	return (0);
+	return (1);
 }
