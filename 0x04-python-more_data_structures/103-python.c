@@ -35,6 +35,7 @@ void print_python_bytes(PyObject *p)
 	}
 
 	Py_ssize_t size = ((PyVarObject *)p)->ob_size;
+
 	printf("  size: %zd\n", size);
 
 	printf("  trying string: %s\n", ((PyBytesObject *)p)->ob_sval);
