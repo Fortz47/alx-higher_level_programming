@@ -13,7 +13,7 @@ def list_division(my_list_1, my_list_2, list_length):
                 raise ZeroDivisionError('division by 0')
 
             # Check if values are numeric
-            if not isinstance(value_1, (int, float))
+            if not isinstance(value_1, (int, float)):
                 raise TypeError('wrong type')
 
             if not isinstance(value_2, (int, float)):
