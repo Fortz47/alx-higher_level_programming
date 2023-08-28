@@ -5,7 +5,7 @@ from sys import stderr
 def safe_function(fct, *args):
     try:
         result = fct(args[0], args[1])
-    except (ZeroDivisionError, IndexError, ValueError) as err:
+    except (ZeroDivisionError, IndexError, TypeError) as err:
         stderr.write(f"Exception: {err}\n")
         return None
     else:
