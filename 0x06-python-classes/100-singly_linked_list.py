@@ -35,11 +35,21 @@ class Node:
             self.__next_node = value
 
 
+
 class SinglyLinkedList:
     """defines a singly linked list"""
     def __init__(self):
         """initializes the list"""
         self.__head = None
+
+    def __str__(self):
+        """prints nodes"""
+        nodes = []
+        current = self.__head
+        while current is not None:
+            nodes.append(current.data)
+            current = current.next_node
+        return '\n'.join(str(node) for node in nodes)
 
     def sorted_insert(self, value):
         """inserts a new Node into the correct sorted position in
@@ -54,12 +64,3 @@ class SinglyLinkedList:
             ptr = ptr.next_node
         addNode.next_node = ptr.next_node
         ptr.next_node = addNode
-
-    def __str__(self):
-        """prints nodes"""
-        nodes = []
-        current = self.__head
-        while current is not None:
-            nodes.append(current.data)
-            current = current.next_node
-        return '\n'.join(str(node) for node in nodes)
