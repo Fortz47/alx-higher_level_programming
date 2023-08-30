@@ -24,7 +24,7 @@ class Square:
         result = ""
         if self.__size == 0:
             pass
-            #result += '\n'
+            # result += '\n'
         else:
             for _ in range(self.__position[1]):
                 result += '\n'
@@ -36,7 +36,8 @@ class Square:
     def __repr__(self):
         result = ""
         if self.__size == 0:
-            result += '\n'
+            pass
+            # result += '\n'
         else:
             for _ in range(self.__position[1]):
                 result += '\n'
