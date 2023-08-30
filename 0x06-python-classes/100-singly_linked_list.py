@@ -43,7 +43,7 @@ class SinglyLinkedList:
         self.__head = None
 
     def __str__(self):
-        """prints nodes"""
+        """prints nodes nicely to stdout"""
         nodes = []
         current = self.__head
         while current is not None:
@@ -54,6 +54,7 @@ class SinglyLinkedList:
     def sorted_insert(self, value):
         """inserts a new Node into the correct sorted position in
         the list (increasing order)"""
+
         addNode = Node(value)
         if self.__head is None or value < self.__head.data:
             addNode.next_node = self.__head
