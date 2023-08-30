@@ -35,7 +35,6 @@ class Node:
             self.__next_node = value
 
 
-
 class SinglyLinkedList:
     """defines a singly linked list"""
     def __init__(self):
