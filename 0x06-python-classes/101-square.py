@@ -23,7 +23,8 @@ class Square:
     def __str__(self):
         result = ""
         if self.__size == 0:
-            result += '\n'
+            pass
+            #result += '\n'
         else:
             for _ in range(self.__position[1]):
                 result += '\n'
@@ -64,19 +65,11 @@ class Square:
 
     def my_print(self):
         """prints in stdout the square with the character #"""
-        i = 0
-
-        print("\n" * self.__position[1], end="")
-        while i < self.__size:
-            print(" " * self.__position[0] + "#" * self.__size)
-            i += 1
         if self.__size == 0:
-            print("")
-        """if self.__size == 0:
             print("")
         print('\n' * self.__position[1], end='')
         for i in range(self.__size):
-            print(' ' * self.__position[0] + '#' * self.__size)"""
+            print(' ' * self.__position[0] + '#' * self.__size)
 
     @property
     def position(self):
