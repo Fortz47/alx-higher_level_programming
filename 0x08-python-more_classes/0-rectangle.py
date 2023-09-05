@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""an empty class"""
+"""an empty rectangle class"""
 
 
 class Rectangle:
