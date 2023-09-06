@@ -39,7 +39,6 @@ class Rectangle:
         """deletes an instance"""
         print('Bye rectangle...')
         Rectangle.number_of_instances -= 1
-        del self
 
     @property
     def width(self):
@@ -78,3 +77,15 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width * 2) + (self.__height * 2)
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """returns the biggest rectangle based on the area"""
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError('rect_1 must be an instance of Rectangle')
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError('rect_2 must be an instance of Rectangle')
+        if rect_2.area() > rect_1.area():
+            return rect_2
+        else:
+            return rect_1

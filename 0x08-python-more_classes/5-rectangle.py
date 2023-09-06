@@ -34,7 +34,6 @@ class Rectangle:
     def __del__(self):
         """deletes an instance"""
         print('Bye rectangle...')
-        del self
 
     @property
     def width(self):
