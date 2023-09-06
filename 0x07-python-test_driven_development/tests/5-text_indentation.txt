@@ -1,0 +1,53 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation('     hel.lo:          my          up  poi')
+hel.
+<BLANKLINE>
+lo:
+<BLANKLINE>
+my          up  poi
+>>> text_indentation('hello. m: friend?')
+hello.
+<BLANKLINE>
+m:
+<BLANKLINE>
+friend?
+<BLANKLINE>
+>>> text_indentation('hello m friend')
+hello m friend
+>>> text_indentation('      hello m friend        ')
+hello m friend
+>>> text_indentation('      hello m friend     ?')
+hello m friend     ?
+<BLANKLINE>
+>>> text_indentation(':      hello m friend        ?')
+:
+<BLANKLINE>
+hello m friend        ?
+<BLANKLINE>
+>>> text_indentation('.:?')
+.
+<BLANKLINE>
+:
+<BLANKLINE>
+?
+<BLANKLINE>
+>>> text_indentation(['hey'])
+Traceback (most recent call last):
+    raise TypeError('text must be a string')
+TypeError: text must be a string
+>>> text_indentation(123)
+Traceback (most recent call last):
+    raise TypeError('text must be a string')
+TypeError: text must be a string
+>>> text_indentation(True)
+Traceback (most recent call last):
+    raise TypeError('text must be a string')
+TypeError: text must be a string
+>>> text_indentation({'a': 'he.'})
+Traceback (most recent call last):
+    raise TypeError('text must be a string')
+TypeError: text must be a string
+>>> text_indentation(None)
+Traceback (most recent call last):
+    raise TypeError('text must be a string')
+TypeError: text must be a string

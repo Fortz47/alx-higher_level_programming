@@ -1,0 +1,39 @@
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name(['jo'], 'jone')
+Traceback (most recent call last):
+    raise TypeError('first_name must be a string')
+TypeError: first_name must be a string
+
+>>> say_my_name('jo', 'jone')
+My name is jo jone
+
+>>> say_my_name('jo', 0)
+Traceback (most recent call last):
+    raise TypeError('last_name must be a string')
+TypeError: last_name must be a string
+
+>>> say_my_name()
+Traceback (most recent call last):
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+>>> say_my_name(True, john)
+Traceback (most recent call last):
+NameError: name 'john' is not defined
+
+>>> say_my_name(True, 'john')
+Traceback (most recent call last):
+    raise TypeError('first_name must be a string')
+TypeError: first_name must be a string
+
+>>> say_my_name('123', 'john')
+My name is 123 john
+
+>>> say_my_name(None, 'john')
+Traceback (most recent call last):
+    raise TypeError('first_name must be a string')
+TypeError: first_name must be a string
+
+>>> say_my_name(None, None)
+Traceback (most recent call last):
+    raise TypeError('first_name must be a string')
+TypeError: first_name must be a string
