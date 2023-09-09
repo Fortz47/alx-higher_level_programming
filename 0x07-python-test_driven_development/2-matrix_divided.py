@@ -21,8 +21,8 @@ def matrix_divided(matrix, div):
         raise TypeError(error)
     if len(matrix) == 1 and len(matrix[0]) == 0:
         return [[]]
-    if len(matrix) < 2:
-        raise TypeError('Each row of the matrix must have the same size')
+    """if len(matrix) < 2:
+        raise TypeError('Each row of the matrix must have the same size')"""
     x = len(matrix[0])
     if any(x != len(row) for row in matrix):
         raise TypeError('Each row of the matrix must have the same size')

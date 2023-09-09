@@ -5,6 +5,10 @@
 Traceback (most recent call last):
     raise TypeError('a must be an integer')
 TypeError: a must be an integer
+>>> add_integer(None, 2)
+Traceback (most recent call last):
+    raise TypeError('a must be an integer')
+TypeError: a must be an integer
 >>> add_integer(2)
 100
 >>> add_integer(2, [])
