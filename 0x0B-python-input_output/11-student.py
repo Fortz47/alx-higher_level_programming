@@ -27,5 +27,4 @@ class Student:
         if isinstance(json, dict):
             for k, v in json.items():
                 if k in ['first_name', 'last_name', 'age']:
-                    self.k = v
-
+                    setattr(self, k, v)
