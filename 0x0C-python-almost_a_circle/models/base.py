@@ -95,8 +95,6 @@ class Base:
                     r4 = int(row[4])
                     r0 = int(row[0])
                     if cls.__name__ == "Rectangle":
-                                int(row[3]), int(row[4]), int(row[0])))
-                    elif cls.__name__ == "Square":
                         instances.append(cls(r1, r2, r3, r4, r0))
                     elif cls.__name__ == "Square":
                         instances.append(cls(r1, r2, r3, r0))
