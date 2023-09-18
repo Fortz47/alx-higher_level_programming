@@ -20,7 +20,13 @@ class Base:
         """returns the JSON string representation of list_dictionaries"""
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return '[]'
-        return json.dumps([obj.to_dictionary() for obj in list_dictionaries])
+        result = []
+        for obj in list_dictionaries:
+            if not isinstance(obj, dict):
+                result.append(obj.to_dictionary())
+            else:
+                result.append(obj)
+        return json.dumps(result)
 
     @classmethod
     def save_to_file(cls, list_objs):
