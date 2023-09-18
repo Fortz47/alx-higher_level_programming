@@ -59,11 +59,11 @@ class Base:
         filename = cls.__name__ + '.csv'
         with open(filename, 'w', newline='') as csvfile:
             writer = csv.writer(csvfile, delimiter=',')
-            for obj in list_objs:
+            for ob in list_objs:
                 if cls.__name__ == "Rectangle":
-                    writer.writerow([obj.id, obj.width, obj.height, obj.x, obj.y])
+                    writer.writerow([ob.id, ob.width, ob.height, ob.x, ob.y])
                 elif cls.__name__ == "Square":
-                    writer.writerow([obj.id, obj.size, obj.x, obj.y])
+                    writer.writerow([ob.id, ob.size, ob.x, ob.y])
 
     @classmethod
     def load_from_file_csv(cls):
@@ -73,10 +73,15 @@ class Base:
             with open(filename, 'r') as csvfile:
                 reader = csv.reader(csvfile, delimiter=',')
                 for row in reader:
+                    r1 = row[1]
+                    r2 = row[2]
+                    r3 = row[3]
+                    r4 = row[4]
+                    r0 = row[0]
                     if cls.__name__ == "Rectangle":
-                        instances.append(cls(int(row[1]), int(row[2]), int(row[3]), int(row[4]), int(row[0])))
+                        instances.append(cls(int(r1), int(r2), int(r3), int(r4), int(r0)))
                     elif cls.__name__ == "Square":
-                        instances.append(cls(int(row[1]), int(row[2]), int(row[3]), int(row[0])))
+                        instances.append(cls(int(r1), int(r2), int(r3), int(r0)))
         except FileNotFoundError:
             return []
 
