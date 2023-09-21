@@ -55,6 +55,22 @@ class Base:
         return dummy_instance
 
     @classmethod
+    def load_from_file(cls):
+        """returns a list of instances"""
+        filename = cls.__name__ + '.json'
+        try:
+            with open(filename, 'r', encoding='utf-8') as f:
+                data = f.read()
+        except FileNotFoundError:
+            return []
+        else:
+            result = []
+            dictionary = cls.from_json_string(data)
+            for data in dictionary:
+                result.append(cls.create(**data))
+            return result
+
+    @classmethod
     def save_to_file_csv(cls, list_objs):
         filename = cls.__name__ + '.csv'
         with open(filename, 'w', newline='') as csvfile:
@@ -86,3 +102,7 @@ class Base:
             return []
 
         return instances
+
+    def draw(list_rectangles, list_squares):
+        """dummy class"""
+        pass
