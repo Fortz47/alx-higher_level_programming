@@ -7,8 +7,8 @@ DEFAULT COLLATE utf8mb4_unicode_ci;
 
 -- Alter table
 ALTER TABLE hbtn_0c_0.first_table
-DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+DEFAULT CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- Alter field
 ALTER TABLE hbtn_0c_0.first_table
-MODIFY name VARCHAR(256) COLLATE utf8mb4_unicode_ci;
+DEFAULT name VARCHAR(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
