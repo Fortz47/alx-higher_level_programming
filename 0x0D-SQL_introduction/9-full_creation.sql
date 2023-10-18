@@ -1,8 +1,6 @@
 -- creates a table second_table in the database hbtn_0c_0
 -- in your MySQL server and add multiples rows.
 
--- use database hbtn_0c_0
-USE hbtn_0c_0;
 -- create table second_table if it doesn't exist and add columns
 CREATE TABLE IF NOT EXISTS second_table (
 	id INT,
