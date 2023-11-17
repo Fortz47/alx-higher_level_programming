@@ -16,7 +16,7 @@ if __name__ == '__main__':
     try:
         db = MySQLdb.connect(host=HOST, port=3306, user=USR, passwd=PAS, db=DB)
         cur = db.cursor()
-        query = "SELECT * FROM states where name = '{}'".format(arg)
+        query = "SELECT * FROM states where BINARY name = '{}'".format(arg)
         cur.execute(query)
         rows = cur.fetchall()
         for row in rows:
