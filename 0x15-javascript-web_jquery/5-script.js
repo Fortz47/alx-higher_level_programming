@@ -1,5 +1,9 @@
 #!/usr/bin/node
 
-$('#red_header').on('click', function (event) {
-  $('header').addClass('red');
+const list = $('UL.my_list');
+
+$('DIV#add_item').on('click', function (event) {
+  list
+    .add('<li>Item</li>')
+    .appendTo(list);
 });
